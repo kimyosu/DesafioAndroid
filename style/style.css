@@ -35,6 +35,9 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+.externo::after {
+    content: "\00A0\1F517";
+}
 
 
 header {
@@ -49,6 +52,7 @@ header>h1 {
     font-family: var(--fonte-destaque);
     margin-top: 40px;
     font-size: 3em;
+    font-weight: normal;
     margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.301);
 }
@@ -58,7 +62,7 @@ header>p {
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
     max-width: 600px;
-    padding: 0 10px 0 10px;
+    padding: 0 10px 1em 10px;
     margin: auto;
 }
 
@@ -69,7 +73,7 @@ nav {
 }
 
 nav>a {
-    color: white;
+    color: var(--cor1);
     padding: 10px;
     text-decoration: none;
     transition: 0.5s;
@@ -108,12 +112,15 @@ main img.pequena {
 main h1 {
     color: var(--cor5);
     font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
 }
 
 main h2 {
     font-family: var(--fonte-android);
     color: var(--cor4);
     font-size: 1.3em;
+    font-weight: normal;
     background-image: linear-gradient(to right, var(--cor1), transparent);
     text-indent: 8px;
 }
@@ -145,7 +152,61 @@ main a:hover {
     color: var(--cor4);
 }
 
+.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--cor5);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.267);
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;;
+}
+
+aside > ul{
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: "\2714\00A0\00A0";
+}
+
 footer {
     background-color: var(--cor5);
     color: white;
+    text-align: center;
+    font-size: 1em;
+
 }
+
+footer a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+
